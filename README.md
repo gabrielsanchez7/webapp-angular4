@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # WebappAngular4
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.3.
@@ -26,3 +27,7 @@ Before running the tests make sure you are serving the app via `ng serve`.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+=======
+# webapp-angular4
+Webapp con angular 4
+>>>>>>> 0a4c81d9b01eac227da9795d98fa6bfd8b05f541
