@@ -10,15 +10,23 @@
 	<label>Descripción:
 		<span *ngIf="!descripcion.valid && descripcion.touched" class="label label-danger">La descripción es obligatoria</span>
 	</label>
-	<textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="producto.descripcion" type="text" placeholder="Nombre" class="form-control" required></textarea>
+	<textarea #descripcion="ngModel" name="descripcion" [(ngModel)]="producto.descripcion" type="text" placeholder="Descripción" class="form-control" required></textarea>
 	<br>
 	<label>Precio:
 		<span *ngIf="!precio.valid && precio.touched" class="label label-danger">El precio no es correcto</span>
 	</label>
-	<input #precio="ngModel" name="precio" [(ngModel)]="producto.precio" type="text" placeholder="Nombre" class="form-control" required pattern="[0-9]+">
+	<input #precio="ngModel" name="precio" [(ngModel)]="producto.precio" type="text" placeholder="Precio" class="form-control" required pattern="[0-9]+">
 	<br>
 	<label>Imagen:</label>
 	<input type="file" class="form-control" (change)="fileChangeEvent($event)">
+	<div *ngIf="is_edit" style="width: 200px; height: 130px; overflow: hidden; margin-top: 20px;">
+		<div *ngIf="producto.imagen">
+			<img src="http://localhost/curso-angular4-backend/uploads/{{producto.imagen}}" class="producto-imagen" alt="">
+		</div>
+		<div *ngIf="!producto.imagen">
+			<div class="img-relleno"></div>
+		</div>
+	</div>
 	<br>
 	<input type="submit" value="{{titulo}}" [disabled]="!formProducto.form.valid" class="btn btn-success">
 </form>
